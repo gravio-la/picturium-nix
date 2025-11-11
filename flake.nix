@@ -11,12 +11,12 @@
         pkgs = nixpkgs.legacyPackages.${system};
         picturium = pkgs.rustPlatform.buildRustPackage {
           pname = "picturium";
-          version = "0.1.1";
+          version = "0.1.5";
 
           src = pkgs.fetchFromGitHub {
             owner = "gravio-la";
             repo = "picturium";
-            rev = "9fa4dce7d7e9a1c8c6f43ad6cdc5f31fc00bc4eb"; # feature/video-thumbnail-support - Switch to picturium/picturium once PR is merged upstream
+            tag = "v0.1.5-video";
             sha256 = "sha256-fRsH6qfB5guXsJuo6HEOsOowyg9SBTajZKmnqN0K/xc=";
           };
 
