@@ -1,6 +1,8 @@
 # Picturium Nix Flake
 
-This repository contains the Nix flake for building and deploying [Picturium](https://github.com/gravio-la/picturium), a fast and caching media server for processing images and generating thumbnails.
+This repository contains the Nix flake for building and deploying [Picturium](https://github.com/picturium/picturium), a fast and caching media server for processing images and generating thumbnails.
+
+**Note:** This flake currently builds from [gravio-la/picturium](https://github.com/gravio-la/picturium) (feature/video-thumbnail-support branch) which includes video thumbnail generation support. Once the video thumbnail PR is merged into the upstream repository ([picturium/picturium](https://github.com/picturium/picturium)), the flake will be updated to use the official repository.
 
 ## Quick Start
 
@@ -110,5 +112,5 @@ To update the picturium source commit:
 
 ## License
 
-See the [main Picturium repository](https://github.com/gravio-la/picturium) for license information.
+See the [main Picturium repository](https://github.com/picturium/picturium) for license information.
 

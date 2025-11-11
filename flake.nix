@@ -13,16 +13,14 @@
           pname = "picturium";
           version = "0.1.1";
 
-          src = pkgs.fetchgit {
-            url = "git@github.com:gravio-la/picturium.git";
-            rev = "main"; # or specify a specific commit/tag
-            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="; # Update with actual hash
+          src = pkgs.fetchFromGitHub {
+            owner = "gravio-la";
+            repo = "picturium";
+            rev = "9fa4dce7d7e9a1c8c6f43ad6cdc5f31fc00bc4eb"; # feature/video-thumbnail-support - Switch to picturium/picturium once PR is merged upstream
+            sha256 = "sha256-fRsH6qfB5guXsJuo6HEOsOowyg9SBTajZKmnqN0K/xc=";
           };
 
-          cargoLock = {
-            lockFile = "${src}/Cargo.lock";
-            outputHashes = { };
-          };
+          cargoHash = "sha256-oZ8H0+nFvejqXjPDLK9H0QWFW4V6xoWIwzEF6jAZVb0=";
 
           nativeBuildInputs = with pkgs; [ pkg-config clang ];
 
@@ -143,7 +141,7 @@
           };
         };
 
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             rustc
             cargo
