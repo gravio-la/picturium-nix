@@ -1,6 +1,18 @@
 # Picturium Nix Flake
 
-This repository contains the Nix flake for building and deploying [Picturium](https://github.com/picturium/picturium), a fast and caching media server for processing images and generating thumbnails.
+This repository contains the Nix flake for building and deploying [Picturium](https://github.com/picturium/picturium), a fast and caching media server for processing images and generating thumbnails on the fly.
+
+## What is Picturium?
+
+Picturium is a high-performance media server that processes images and generates thumbnails dynamically. It's designed to be fast, efficient, and easy to deploy. Key features include:
+
+- **Dynamic Image Processing** - Resize, crop, rotate, and convert images on-the-fly via URL parameters
+- **Smart Caching** - Automatic cache management with configurable size limits and periodic cleanup
+- **Modern Image Formats** - Supports AVIF and WebP with automatic format selection based on browser capabilities
+- **Video Thumbnail Generation** - Extract thumbnails from video files using multiple backends (native FFmpeg, command-line FFmpeg, or MPV)
+- **Wide Format Support** - Handles images (JPEG, PNG, WebP, HEIC, AVIF, SVG, etc.), videos (MP4, MKV, WebM, etc.), PDFs, and office documents
+- **Token Authorization** - Built-in HMAC-based authentication to protect against unauthorized access
+- **Docker-Ready** - Easy deployment via Docker containers
 
 **Note:** This flake currently builds from [gravio-la/picturium](https://github.com/gravio-la/picturium) (feature/video-thumbnail-support branch) which includes video thumbnail generation support. Once the video thumbnail PR is merged into the upstream repository ([picturium/picturium](https://github.com/picturium/picturium)), the flake will be updated to use the official repository.
 
