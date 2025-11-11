@@ -36,7 +36,7 @@
         };
       }
     ) // {
-      # NixOS module (system-independent)
+      
       nixosModules.default = import ./module.nix;
       nixosModules.picturium = import ./module.nix;
     };
