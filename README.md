@@ -1,5 +1,8 @@
 # Picturium Nix Flake
 
+[![built with garnix](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fgravio-la%2Fpicturium-nix)](https://garnix.io/repo/gravio-la/picturium-nix)
+
+
 This repository contains the Nix flake for building and deploying [Picturium](https://github.com/picturium/picturium), a fast and caching media server for processing images and generating thumbnails on the fly.
 
 ## What is Picturium?
