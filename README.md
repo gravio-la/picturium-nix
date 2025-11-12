@@ -83,6 +83,7 @@ Add this flake as an input in your `flake.nix`:
 
 The NixOS module provides the following options:
 
+- `services.picturium.dataDir` - Data directory (MUST be set!)
 - `services.picturium.enable` - Enable the Picturium service (default: `false`)
 - `services.picturium.host` - Host to bind to (default: `127.0.0.1`)
 - `services.picturium.port` - Port to listen on (default: `20045`)
@@ -93,7 +94,6 @@ The NixOS module provides the following options:
 - `services.picturium.cache` - Cache directory (default: `/var/cache/picturium`)
 - `services.picturium.cacheEnable` - Enable caching (default: `true`)
 - `services.picturium.cacheCapacity` - Cache capacity in GB (default: `10`)
-- `services.picturium.dataDir` - Data directory (default: `/var/lib/picturium/data`)
 - `services.picturium.videoBackend` - Video thumbnail backend: auto, ffmpeg, or mpv (default: `auto`)
 - `services.picturium.videoThumbnailPositions` - Positions to sample for video thumbnails (default: `"25%,20%,15%,0"`)
 
